@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,9 @@
     <header class="w-full min-h-[682px] bg-hero bg-contain bg-center pt-[100px]">
         <div class="flex flex-col max-w-1040 mx-auto gap-20">
             <div class="flex flex-col w-[680px] mx-auto items-center">
-                <div class="w-[96px] h-[96px] border-2 mb-14 border-red rounded-full"></div>
+                <div class="w-[96px] h-[96px] outline outline-2 mb-14 outline-red rounded-full">
+                    <img src="./assets/images/eu-3d.png" alt="avatar" class="object-cover rounded-full">
+                </div>
                 <div class="flex flex-col text-center gap-5">
                     <div class="flex flex-col gap-2">
                         <h2 class="font-inconsolata text-subtitle text-gray-500">Hello World! Meu nome é <span class="text-red">Adriano Manfron</span> e sou</h2>
@@ -23,11 +25,7 @@
                 </div>
             </div>
             <div class="flex gap-2 w-[680px] mx-auto justify-center items-center">
-                <button class="bg-green text-gray-200 text-tag_md font-bold px-3 py-1 rounded-full">GitHub</button>
-                <button class="bg-purple text-gray-200 text-tag_md font-bold px-3 py-1 rounded-full">PHP</button>
-                <button class="bg-blue text-gray-200 text-tag_md font-bold px-3 py-1 rounded-full">CSS</button>
-                <button class="bg-red text-gray-200 text-tag_md font-bold px-3 py-1 rounded-full">HTML</button>
-                <button class="bg-yellow text-gray-200 text-tag_md font-bold px-3 py-1 rounded-full">Javascript</button>
+                <?php include('./components/tags-md.php'); ?>
             </div>
         </div>
     </header>
@@ -37,22 +35,18 @@
             <h2 class="font-asap text-title_md font-bold text-gray-600">Veja os projetos em destaque</h2>
         </div>
         <div class="max-w-1040 mx-auto grid grid-cols-2 gap-6">
-            <div class="flex w-[508px] h-[180px] p-3 gap-4 rounded-xl bg-gray-300">
-                <div class="flex-1 bg-gray-200 rounded-lg"></div>
-                <div class="flex flex-col flex-1 px-1 py-2 gap-6">
-                    <div class="flex flex-col gap-2">
-                        <h4 class="font-asap text-title_sm font-bold text-gray-600">title</h4>
-                        <p class="font-maven text-text_sm text-gray-500">Lorem ipsum dolor sit amet consectetur. Viverra sed laoreet eu ornare.</p>
-                    </div>
-                    <div class="flex gap-2">
-                        <button class="bg-purple text-gray-200 text-tag_sm font-bold px-2 py-[2px] rounded-full">PHP</button>
-                        <button class="bg-blue text-gray-200 text-tag_sm font-bold px-2 py-[2px] rounded-full">CSS</button>
-                        <button class="bg-red text-gray-200 text-tag_sm font-bold px-2 py-[2px] rounded-full">HTML</button>
-                        <button class="bg-yellow text-gray-200 text-tag_sm font-bold px-2 py-[2px] rounded-full">Javascript</button>
-                    </div>
-                </div>
-            </div>
+            <?php include('./components/project-card.php'); ?>
         </div>
     </main>
+    <footer class="flex flex-col w-full min-h-[787px] bg-contact bg-contain bg-center px-[120px] pt-32 pb-[200px] justify-center items-center gap-12">
+        <div class="flex flex-col w-[420px] text-center gap-2">
+            <h3 class="font-inconsolata text-subtitle text-purple">Contato</h3>
+            <h2 class="font-asap text-title_md font-bold text-gray-600">Gostou do meu trabalho?</h2>
+            <p class="font-maven text-text_md text-gray-500">Entre em contato ou acompanhe as minhas redes sociais!</p>
+        </div>
+        <div class="flex flex-col w-[400px] gap-4">
+            <?php include('./components/social-button.php'); ?>
+        </div>
+    </footer>
 </body>
 </html>
